@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
--- 主机： 127.0.0.1
--- 生成日期： 2020-05-10 17:00:13
--- 服务器版本： 10.4.11-MariaDB
--- PHP 版本： 7.4.4
+-- Host: 127.0.0.1
+-- Generation Time: 2020-05-15 14:41:49
+-- 服务器版本： 10.1.19-MariaDB
+-- PHP Version: 5.6.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -18,8 +17,20 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- 数据库： `wanmingtang`
+-- Database: `wanmingtang`
 --
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `address`
+--
+
+CREATE TABLE `address` (
+  `province` varchar(20) NOT NULL,
+  `city` varchar(20) NOT NULL,
+  `area` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -178,15 +189,17 @@ CREATE TABLE `list` (
   `liulanliang` int(8) NOT NULL,
   `comment` varchar(1000) NOT NULL,
   `swipe` varchar(1000) NOT NULL,
-  `xiangqing` varchar(1000) NOT NULL
+  `xiangqing` varchar(1000) NOT NULL,
+  `unit` varchar(3) NOT NULL,
+  `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- 转存表中的数据 `list`
 --
 
-INSERT INTO `list` (`id`, `title`, `price`, `isOnSale`, `liulanliang`, `comment`, `swipe`, `xiangqing`) VALUES
-(0, '宜宾五粮液股份有限公司出品52°春夏秋冬精酿酒 浓香型白酒500ml（单瓶装）', 660, 1, 3487, '[{phone:15123469874,comment:\'已经收到，还挺满意\'},{phone:17823466597,comment:\'不错，发货速度很快，酒也不错\'},{phone:15123466597,comment:\'酒喝着不错，不上头\'},{phone:15123466398,comment:\'送礼，我看评价挺好的\'},{phone:15123461235,comment:\'酒确实不错\'},{phone:13123464531,comment:\'送礼的，还不错\'},{phone:15123464445,comment:\'不错，发货速度很快，就也不错\'},{phone:15323466597,comment:\'包装很好，准备送人\'},{phone:15123469874,comment:\'已经收到，还挺满意\'},{phone:17823466597,comment:\'不错，发货速度很快，酒也不错\'},{phone:15123466597,comment:\'酒喝着不错，不上头\'},{phone:15123466398,comment:\'送礼，我看评价挺好的\'},{phone:15123461235,comment:\'酒确实不错\'},{phone:13123464531,comment:\'送礼的，还不错\'},{phone:15123464445,comment:\'不错，发货速度很快，就也不错\'},{phone:15323466597,comment:\'包装很好，准备送人\'}]', '[http://www.99mi.com/images/201909/thumb_img/872_thumb_P_1569612772510.jpg,http://www.99mi.com/images/201904/thumb_img/872_thumb_P_1554766794506.jpg,http://www.99mi.com/images/201909/thumb_img/872_thumb_P_1569612772737.jpg,http://www.99mi.com/images/201605/thumb_img/872_thumb_P_1463964557139.jpg,http://www.99mi.com/images/201909/thumb_img/872_thumb_P_1569612773042.jpg,http://www.99mi.com/images/201909/thumb_img/872_thumb_P_1569612773315.jpg,http://www.99mi.com/images/202004/thumb_img/872_thumb_P_1588101724517.jpg]', '[http://m.99mi.com/images/upload/Image/手机端关联版式新.jpg,http://m.99mi.com/images/upload/Image/微信图片_20200331092210手机_01.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_02.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_03.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_04.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_05.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_06.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_07.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_08.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_09.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_10.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_11.jpg]');
+INSERT INTO `list` (`id`, `title`, `price`, `isOnSale`, `liulanliang`, `comment`, `swipe`, `xiangqing`, `unit`, `image`) VALUES
+(0, '宜宾五粮液股份有限公司出品52°春夏秋冬精酿酒 浓香型白酒500ml（单瓶装）', 660, 1, 3487, '[{phone:15123469874,comment:''已经收到，还挺满意''},{phone:17823466597,comment:''不错，发货速度很快，酒也不错''},{phone:15123466597,comment:''酒喝着不错，不上头''},{phone:15123466398,comment:''送礼，我看评价挺好的''},{phone:15123461235,comment:''酒确实不错''},{phone:13123464531,comment:''送礼的，还不错''},{phone:15123464445,comment:''不错，发货速度很快，就也不错''},{phone:15323466597,comment:''包装很好，准备送人''},{phone:15123469874,comment:''已经收到，还挺满意''},{phone:17823466597,comment:''不错，发货速度很快，酒也不错''},{phone:15123466597,comment:''酒喝着不错，不上头''},{phone:15123466398,comment:''送礼，我看评价挺好的''},{phone:15123461235,comment:''酒确实不错''},{phone:13123464531,comment:''送礼的，还不错''},{phone:15123464445,comment:''不错，发货速度很快，就也不错''},{phone:15323466597,comment:''包装很好，准备送人''}]', '[http://www.99mi.com/images/201909/thumb_img/872_thumb_P_1569612772510.jpg,http://www.99mi.com/images/201904/thumb_img/872_thumb_P_1554766794506.jpg,http://www.99mi.com/images/201909/thumb_img/872_thumb_P_1569612772737.jpg,http://www.99mi.com/images/201605/thumb_img/872_thumb_P_1463964557139.jpg,http://www.99mi.com/images/201909/thumb_img/872_thumb_P_1569612773042.jpg,http://www.99mi.com/images/201909/thumb_img/872_thumb_P_1569612773315.jpg,http://www.99mi.com/images/202004/thumb_img/872_thumb_P_1588101724517.jpg]', '[http://m.99mi.com/images/upload/Image/手机端关联版式新.jpg,http://m.99mi.com/images/upload/Image/微信图片_20200331092210手机_01.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_02.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_03.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_04.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_05.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_06.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_07.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_08.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_09.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_10.jpg,http://m.99mi.com/images/upload/Image/52度精酿无瓶sj_11.jpg]', '瓶', 'http://m.99mi.com/images/201904/thumb_img/872_thumb_G_1554766794627.jpg');
 
 -- --------------------------------------------------------
 
@@ -296,22 +309,26 @@ INSERT INTO `type` (`id`, `title`, `image`, `router`) VALUES
 --
 
 CREATE TABLE `user` (
-  `uid` int(12) NOT NULL,
-  `uname` varchar(32) NOT NULL,
-  `upwd` varchar(32) NOT NULL,
+  `uid` int(11) NOT NULL,
+  `uname` varchar(16) NOT NULL,
   `phone` int(11) NOT NULL,
+  `upwd` varchar(32) NOT NULL,
   `age` int(3) NOT NULL,
   `sex` tinyint(1) NOT NULL,
-  `QQ` int(12) NOT NULL,
-  `email` varchar(32) NOT NULL
+  `location` varchar(10000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- 转存表中的数据 `user`
 --
 
-INSERT INTO `user` (`uid`, `uname`, `upwd`, `phone`, `age`, `sex`, `QQ`, `email`) VALUES
-(1, 'dangdang', 'q1234567', 0, 23, 1, 0, '');
+INSERT INTO `user` (`uid`, `uname`, `phone`, `upwd`, `age`, `sex`, `location`) VALUES
+(1, 'qweqweqwe', 0, 'b26986ceee60f744534aaab928cc12df', 0, 0, ''),
+(2, 'dangdang', 0, '3ade3fd6e8eef84f2ea91f6474be10d9', 0, 0, ''),
+(3, '21212121', 0, 'a8c4b738e1f56f7082c37abfab2f3a7c', 0, 0, ''),
+(4, 'chen', 0, '001793d1e48ece880b94c445c6bbae30', 0, 0, '[{"uid":"4","phone":"13111111111","province":"120000,天津","city":"120100,天津市","area":"和平区","username":"11","text":"e","callback":"jsonp_1d5ba8aa1194790"},{"uid":"4","phone":"15626598745","province":"510000,四川省","city":"511900,巴中市","area":"巴州区","username":"消化","text":"市中区","callback":"jsonp_1eff44f34b6bbe0"}]'),
+(5, 'daangdang', 0, 'e10adc3949ba59abbe56e057f20f883e', 0, 0, ''),
+(6, 'dangdang111', 0, 'e10adc3949ba59abbe56e057f20f883e', 0, 0, '');
 
 -- --------------------------------------------------------
 
@@ -438,50 +455,54 @@ INSERT INTO `zltz` (`id`, `title`, `image`, `price`, `list_id`, `unit`) VALUES
 (2, '52°真龙天子酒（真龙）浓香型白酒500ml（单瓶装）', 'http://m.99mi.com/images/202004/thumb_img/199_thumb_G_1588102784517.jpg', 2700, 10, '瓶');
 
 --
--- 转储表的索引
+-- Indexes for dumped tables
 --
 
 --
--- 表的索引 `like`
+-- Indexes for table `like`
 --
 ALTER TABLE `like`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `swipe`
+-- Indexes for table `swipe`
 --
 ALTER TABLE `swipe`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`uid`),
-  ADD UNIQUE KEY `uname` (`uname`),
-  ADD UNIQUE KEY `email` (`email`),
-  ADD UNIQUE KEY `QQ` (`QQ`),
-  ADD UNIQUE KEY `phone` (`phone`);
+  ADD PRIMARY KEY (`uid`);
 
 --
--- 表的索引 `xilie`
+-- Indexes for table `xilie`
 --
 ALTER TABLE `xilie`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `xpsh`
+-- Indexes for table `xpsh`
 --
 ALTER TABLE `xpsh`
   ADD PRIMARY KEY (`id`);
 
 --
--- 表的索引 `zhuda`
+-- Indexes for table `zhuda`
 --
 ALTER TABLE `zhuda`
   ADD PRIMARY KEY (`id`);
-COMMIT;
 
+--
+-- 在导出的表使用AUTO_INCREMENT
+--
+
+--
+-- 使用表AUTO_INCREMENT `user`
+--
+ALTER TABLE `user`
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
